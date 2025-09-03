@@ -10,5 +10,5 @@ else
     warn("Your executor doesn't support queue_on_teleport.")
 end
 
-wait(5)
+wait(10)
 game:GetService("TeleportService"):Teleport(game.PlaceId, game.Players.LocalPlayer)
