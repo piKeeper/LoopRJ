@@ -2,6 +2,12 @@ local queueCode = [[
     loadstring(game:HttpGet("https://raw.githubusercontent.com/piKeeper/LoopRJ/refs/heads/main/Script1", true))()
 ]]
 
-syn.queue_on_teleport(queueCode)
+if syn and syn.queue_on_teleport then
+    syn.queue_on_teleport(queueCode)
+elseif queue_on_teleport then
+    queue_on_teleport(queueCode)
+else
+    warn("Your executor doesn't support queue_on_teleport.")
+end
 
 game:GetService("TeleportService"):Teleport(game.PlaceId, game.Players.LocalPlayer)
